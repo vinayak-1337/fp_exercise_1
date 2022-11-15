@@ -47,6 +47,34 @@ header {
   color: var(--dark-grayish-blue);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.banner.container {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.title-container {
+  display: flex;
+  column-gap: 40px;
+  padding: 30px 0;
+}
+.title-container > div {
+  width: 50%;
+  color: var(--dark-grayish-blue);
+  line-height: 25px;
+}
+
+#title {
+  font-size: 50px;
+  line-height: 50px;
+  width: 50%;
+}
+
 @media screen and (max-width: 600px) {
   body {
     padding: 0 20px;
