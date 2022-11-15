@@ -19,23 +19,60 @@ body {
   font-family: "Inter", sans-serif;
   background-color: var(--off-white);
   font-size: 15px;
+  padding: 0 100px;
 }
 
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin: 10px 0;
 }
 
-nav > ul{
+#hamburger-button {
+  display: none;
+  font-size: 30px;
+}
+
+.nav-item-container{
   display: flex;
   list-style: none;
   column-gap: 20px;
+  align-items: center;
 }
 
 .nav-link {
   text-decoration: none;
   padding: 5px 10px;
   color: var(--dark-grayish-blue);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 20px;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    width: 100%;
+  }
+  .nav-item-container {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 100%;
+  }
+  .nav-link {
+    font-size: 20px;
+  }
+  #hamburger-button {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 20px;
+  }
 }
