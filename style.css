@@ -33,6 +33,9 @@ header {
   display: none;
   font-size: 30px;
 }
+#nav-check {
+  display: none;
+}
 
 .nav-item-container {
   display: flex;
@@ -152,7 +155,7 @@ img {
 .article-title {
   font-size: 15px;
 }
-.article-img{
+.article-img {
   max-width: 140px;
 }
 .article-number {
@@ -178,9 +181,9 @@ img {
   .read-more-btn {
     padding: 15px 25px;
   }
-  .article-img{
-  max-width: 120px;
-}
+  .article-img {
+    max-width: 120px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -233,6 +236,12 @@ img {
     right: 0;
     top: 0;
     padding: 20px;
+  }
+  #nav-check:not(:checked) ~ ul {
+    display: none;
+  }
+  #nav-check:checked ~ ul {
+    display: flex;
   }
   .banner.container {
     flex-direction: column;
