@@ -33,6 +33,9 @@ header {
   display: none;
   font-size: 30px;
 }
+#nav-check {
+  display: none;
+}
 
 .nav-item-container {
   display: flex;
@@ -45,6 +48,27 @@ header {
   text-decoration: none;
   padding: 5px 10px;
   color: var(--dark-grayish-blue);
+  position: relative;
+  overflow: hidden;
+}
+.nav-link::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid var(--soft-red);
+  width: 80%;
+  bottom: 0;
+  left: 8px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--soft-red);
+}
+.nav-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 img {
@@ -87,6 +111,7 @@ img {
 }
 .read-more-btn:hover {
   background-color: var(--soft-red);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
 }
 
 #title {
@@ -136,6 +161,10 @@ img {
   column-gap: 20px;
   flex: 1 1 48%;
 }
+.article-item:hover {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+  cursor: pointer;
+}
 .article-content {
   display: flex;
   flex-direction: column;
@@ -144,7 +173,7 @@ img {
 .article-title {
   font-size: 15px;
 }
-.article-img{
+.article-img {
   max-width: 140px;
 }
 .article-number {
@@ -170,9 +199,9 @@ img {
   .read-more-btn {
     padding: 15px 25px;
   }
-  .article-img{
-  max-width: 120px;
-}
+  .article-img {
+    max-width: 120px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -225,6 +254,12 @@ img {
     right: 0;
     top: 0;
     padding: 20px;
+  }
+  #nav-check:not(:checked) ~ ul {
+    display: none;
+  }
+  #nav-check:checked ~ ul {
+    display: flex;
   }
   .banner.container {
     flex-direction: column;
