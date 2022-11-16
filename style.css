@@ -33,7 +33,7 @@ header {
   display: none;
   font-size: 30px;
 }
-#nav-check {
+#mobile-close-btn,#nav-check {
   display: none;
 }
 
@@ -254,6 +254,7 @@ img {
     overflow: hidden;
   }
   #mobile-close-btn {
+    display: block;
     align-self: flex-end;
     margin-right: 20px;
     font-size: 25px;
