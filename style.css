@@ -46,6 +46,9 @@ header {
   padding: 5px 10px;
   color: var(--dark-grayish-blue);
 }
+.nav-link:hover {
+  color: var(--soft-red);
+}
 
 img {
   max-width: 100%;
@@ -87,6 +90,7 @@ img {
 }
 .read-more-btn:hover {
   background-color: var(--soft-red);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
 }
 
 #title {
@@ -135,6 +139,10 @@ img {
   display: flex;
   column-gap: 20px;
   flex: 1 1 48%;
+}
+.article-item:hover {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+  cursor: pointer;
 }
 .article-content {
   display: flex;
