@@ -48,9 +48,27 @@ header {
   text-decoration: none;
   padding: 5px 10px;
   color: var(--dark-grayish-blue);
+  position: relative;
+  overflow: hidden;
 }
+.nav-link::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid var(--soft-red);
+  width: 80%;
+  bottom: 0;
+  left: 8px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
 .nav-link:hover {
   color: var(--soft-red);
+}
+.nav-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 img {
