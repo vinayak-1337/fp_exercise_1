@@ -237,13 +237,27 @@ img {
   }
   nav {
     width: 100%;
+    /* position: relative; */
   }
   .nav-item-container {
-    display: none;
+    display: flex;
+    position: absolute;
+    background-color: var(--off-white);
     align-items: center;
     flex-direction: column;
-    row-gap: 5px;
-    width: 100%;
+    row-gap: 10px;
+    width: 0;
+    right: 0;
+    top: 0;
+    padding-top: 50px;
+    height: 100%;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+  #mobile-close-btn {
+    align-self: flex-end;
+    margin-right: 20px;
+    font-size: 25px;
   }
   .nav-link {
     font-size: 20px;
@@ -256,10 +270,10 @@ img {
     padding: 20px;
   }
   #nav-check:not(:checked) ~ ul {
-    display: none;
+    width: 0;
   }
   #nav-check:checked ~ ul {
-    display: flex;
+    width: 50%;
   }
   .banner.container {
     flex-direction: column;
