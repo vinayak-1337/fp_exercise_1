@@ -119,32 +119,32 @@ img {
   line-height: 50px;
   width: 50%;
 }
-.left {
+.banner-left {
   flex-shrink: 1.3;
 }
-.right {
+.banner-right {
   background-color: var(--very-dark-blue);
   color: var(--grayish-blue);
   padding: 25px 20px;
   flex-shrink: 1.1;
 }
 
-.right > h2 {
+.banner-right > h2 {
   font-size: 35px;
 }
 
-.right > h2,
-.right > div:nth-child(3) > h3 {
+.banner-right > h2,
+.banner-right > div:nth-child(3) > h3 {
   color: var(--soft-orange);
 }
 
-.right > div {
+.banner-right > div {
   padding: 25px 0;
 }
-.right > div:not(:last-child) {
+.banner-right > div:not(:last-child) {
   border-bottom: 1px solid var(--grayish-blue);
 }
-.right > div > h3 {
+.banner-right > div > h3 {
   color: var(--off-white);
   margin-bottom: 10px;
 }
