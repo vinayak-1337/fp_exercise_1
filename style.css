@@ -82,6 +82,19 @@ img {
   column-gap: 30px;
 }
 
+.mobile-image {
+  display: none;
+}
+.desktop-image {
+  width: 100%;
+}
+.image-box {
+  max-width: 780px;
+  max-height: 324px;
+  overflow: hidden;
+  aspect-ratio: 780/324;
+}
+
 .title-container {
   display: flex;
   column-gap: 40px;
@@ -169,12 +182,14 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0 0 10px 0;
 }
 .article-title {
   font-size: 15px;
 }
 .article-img {
   max-width: 140px;
+  aspect-ratio: 140/177;
 }
 .article-number {
   font-size: 30px;
@@ -206,10 +221,13 @@ img {
 
 @media screen and (max-width: 992px) {
   body {
-    padding: 0 50px 50px;
+    padding: 0 30px 50px;
   }
   .nav-item-container {
     column-gap: 5px;
+  }
+  .banner.container {
+    column-gap: 15px;
   }
   .read-more-btn {
     padding: 10px 15px;
@@ -224,6 +242,12 @@ img {
   }
   .article-container {
     column-gap: 10px;
+  }
+  .article-content {
+    padding: 0 0 5px 0;
+  }
+  .article-description {
+    line-height: 20px;
   }
 }
 
@@ -275,8 +299,22 @@ img {
   #nav-check:checked ~ ul {
     width: 50%;
   }
+  .image-box {
+    max-width: 686px;
+    max-height: 600px;
+    aspect-ratio: 686/600;
+  }
+  .mobile-image {
+    width: 100%;
+  }
   .banner.container {
     flex-direction: column;
+  }
+  .mobile-image {
+    display: block;
+  }
+  .desktop-image {
+    display: none;
   }
   .article-container {
     flex-direction: column;
