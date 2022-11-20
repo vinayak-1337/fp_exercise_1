@@ -26,7 +26,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 0;
+  margin: 10px auto;
+  max-width: 1280px;
 }
 
 #hamburger-button {
@@ -71,6 +72,11 @@ header {
   transform: scaleX(1);
 }
 
+main {
+  max-width: 1280px;
+ margin: 0 auto;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -89,8 +95,6 @@ img {
   width: 100%;
 }
 .image-box {
-  max-width: 780px;
-  max-height: 324px;
   overflow: hidden;
   aspect-ratio: 780/324;
 }
