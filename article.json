@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Reviving Retro PCs",
+    "description": "What happens when old PCs are given modern upgrades?",
+    "imageSrc": "image-retro-pcs.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Top 10 Laptops of 2022",
+    "description": "Our best nicks for various needs and budgets.",
+    "imageSrc": "image-top-laptops.jpg"
+  },
+  {
+    "id": 3,
+    "title": "The Growth of Gaming",
+    "description": "How the pandemic has sparked fresh opportunities.",
+    "imageSrc": "image-gaming-growth.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Upcoming awesome neuro-tech",
+    "description": "The neuro-tech that can change how people interact.",
+    "imageSrc": "image-neuro-tech.jpg"
+  }
+]
