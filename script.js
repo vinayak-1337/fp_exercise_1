@@ -1,13 +1,5 @@
-const articleList = [];
-
-fetch("./article.json")
-  .then((response) => response.json())
-  .then((data) => {
-    data.forEach(addArticlesToPage);
-  })
-  .catch((error) => console.log(error));
-
 const articleContainer = document.querySelector(".article-container");
+const loadMoreBtn = document.querySelector(".load-btn");
 
 function prependZero(num) {
   return String(num).padStart(2, "0");
@@ -35,3 +27,15 @@ function addArticlesToPage({ id, title, description, imageSrc }) {
   articleItem.append(articleImage, articleContent);
   articleContainer.append(articleItem);
 }
+
+function loadArticles() {
+  fetch("./article.json")
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach(addArticlesToPage);
+    })
+    .catch((error) => console.log(error));
+}
+loadArticles();
+
+loadMoreBtn.addEventListener("click", loadArticles);

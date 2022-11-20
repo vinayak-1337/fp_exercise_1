@@ -114,7 +114,7 @@ img {
   row-gap: 30px;
 }
 
-.read-more-btn {
+.primary-btn {
   display: block;
   border: none;
   outline: none;
@@ -126,9 +126,13 @@ img {
   text-transform: uppercase;
   cursor: pointer;
 }
-.read-more-btn:hover {
+.primary-btn:hover {
   background-color: var(--soft-red);
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+}
+
+.load-btn {
+  margin: 30px auto 10px;
 }
 
 #title {
@@ -215,7 +219,7 @@ img {
   #title {
     font-size: 45px;
   }
-  .read-more-btn {
+  .primary-btn {
     padding: 15px 25px;
   }
   .article-img {
@@ -233,7 +237,7 @@ img {
   .banner.container {
     column-gap: 15px;
   }
-  .read-more-btn {
+  .primary-btn {
     padding: 10px 15px;
   }
   .title-container {
