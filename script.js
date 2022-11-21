@@ -1,5 +1,5 @@
-const articleContainer = document.querySelector(".article-container");
-const loadMoreBtn = document.querySelector(".load-btn");
+const articleContainer = document.querySelector("#article-container");
+const loadMoreBtn = document.querySelector("#load-btn");
 
 function prependZero(num) {
   return String(num).padStart(2, "0");
