@@ -34,7 +34,8 @@ header {
   display: none;
   font-size: 30px;
 }
-#mobile-close-btn,#nav-check {
+#mobile-close-btn,
+#nav-check {
   display: none;
 }
 
@@ -74,7 +75,7 @@ header {
 
 main {
   max-width: 1280px;
- margin: 0 auto;
+  margin: 0 auto;
 }
 
 img {
@@ -189,7 +190,7 @@ img {
 .article-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 0 10px 0;
 }
 .article-title {
@@ -207,6 +208,81 @@ img {
 .article-description {
   color: var(--dark-grayish-blue);
   line-height: 25px;
+}
+
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+  padding: 20px;
+  border-top: 2px solid var(--dark-grayish-blue);
+}
+
+.feedback-container > h2 {
+  margin: 10px 0;
+}
+
+.form-input {
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+.form-input > input[type="text"] {
+  width: 300px;
+  height: 35px;
+  outline: none;
+  line-height: 35px;
+  border: 1px solid var(--dark-grayish-blue);
+  font-size: 16px;
+  padding: 0 10px;
+  font-family: inherit;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 30%);
+}
+
+.feedback-container .form-input textarea {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 30%);
+  border: 1px solid var(--dark-grayish-blue);
+  padding: 10px;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+  width: 500px;
+  height: 130px;
+  resize: none;
+}
+
+#feedback-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 10px;
+  width: 100%;
+  margin: 20px 0 0;
+  padding: 10px 0;
+}
+
+.fb-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+  max-width: 300px;
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.fb-message {
+  text-align: justify;
+}
+
+.fb-name {
+  color: var(--soft-orange);
+  text-align: right;
+  margin: 10px 0 0 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -326,5 +402,11 @@ img {
   }
   #article-container {
     flex-direction: column;
+  }
+  .feedback-container .form-input,
+  form,
+  .feedback-container .form-input textarea,
+  .form-input > input[type="text"] {
+    width: 100%;
   }
 }

@@ -84,16 +84,26 @@
       <section id="article-container"></section>
       <button id="load-btn" class="primary-btn load-btn">Load more</button>
       <section class="feedback-container">
-        <h2>Feedback Form</h2>
-        <form>
+        <h2>Feedback & Suggestion Form</h2>
+        <form id="feedback-form" action="#">
           <div class="form-input">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name">
+            <input
+              type="text"
+              name="name"
+              id="fb-form-name"
+              placeholder="Name"
+            />
           </div>
           <div class="form-input">
-            <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+            <textarea
+              name="feedback"
+              id="fb-form-message"
+              placeholder="Message"
+            ></textarea>
           </div>
+          <input type="submit" value="Submit" />
         </form>
+        <div id="feedback-list"></div>
       </section>
     </main>
   </body>

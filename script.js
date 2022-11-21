@@ -39,3 +39,34 @@ function loadArticles() {
 loadArticles();
 
 loadMoreBtn.addEventListener("click", loadArticles);
+const feedbackList = document.querySelector("#feedback-list");
+const feedbackForm = document.getElementById("feedback-form");
+console.log("hello");
+
+function addItemToFeedbackList(event) {
+  event.preventDefault();
+  const fbFormName = document.querySelector("#fb-form-name");
+  const fbFormMessage = document.querySelector("#fb-form-message");
+
+  console.log(fbFormMessage.value);
+
+  const fbItem = document.createElement("div");
+  fbItem.classList.add("fb-item");
+
+  const fbMessage = document.createElement("p");
+  fbMessage.classList.add("fb-message");
+
+  const fbName = document.createElement("p");
+  fbName.classList.add("fb-name");
+
+  fbMessage.innerText = fbFormMessage.value;
+  fbName.innerText = `--${fbFormName.value}`;
+
+  fbItem.append(fbMessage, fbName);
+  feedbackList.append(fbItem);
+
+  fbFormName.value = "";
+  fbFormMessage.value = "";
+}
+
+feedbackForm.addEventListener("submit", addItemToFeedbackList);
