@@ -1,5 +1,7 @@
 const articleContainer = document.querySelector("#article-container");
 const loadMoreBtn = document.querySelector("#load-btn");
+const feedbackList = document.querySelector("#feedback-list");
+const feedbackForm = document.querySelector("#feedback-form");
 
 function prependZero(num) {
   return String(num).padStart(2, "0");
@@ -7,21 +9,27 @@ function prependZero(num) {
 
 function addArticlesToPage({ id, title, description, imageSrc }) {
   const articleItem = document.createElement("article");
-  const articleImage = document.createElement("img");
-  const articleContent = document.createElement("div");
-  const articleNumber = document.createElement("div");
-  const articleTitle = document.createElement("h3");
-  const articleDescription = document.createElement("p");
   articleItem.classList.add("article-item");
+
+  const articleImage = document.createElement("img");
   articleImage.classList.add("article-img");
   articleImage.setAttribute("src", `./assets/images/${imageSrc}`);
   articleImage.setAttribute("alt", "article");
+
+  const articleContent = document.createElement("div");
   articleContent.classList.add("article-content");
+
+  const articleNumber = document.createElement("div");
   articleNumber.classList.add("article-number");
   articleNumber.innerText = prependZero(id);
+
+  const articleTitle = document.createElement("h3");
   articleTitle.classList.add("article-title");
   articleTitle.innerText = title;
+  
+  const articleDescription = document.createElement("p");
   articleDescription.classList.add("article-description");
+  
   articleDescription.innerText = description;
   articleContent.append(articleNumber, articleTitle, articleDescription);
   articleItem.append(articleImage, articleContent);
@@ -39,9 +47,6 @@ function loadArticles() {
 loadArticles();
 
 loadMoreBtn.addEventListener("click", loadArticles);
-const feedbackList = document.querySelector("#feedback-list");
-const feedbackForm = document.getElementById("feedback-form");
-console.log("hello");
 
 function addItemToFeedbackList(event) {
   event.preventDefault();
