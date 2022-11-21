@@ -259,10 +259,10 @@ img {
 
 #feedback-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   row-gap: 20px;
-  column-gap: 10px;
+  column-gap: 20px;
   width: 100%;
   margin: 20px 0 0;
   padding: 10px 0;
@@ -274,8 +274,9 @@ img {
   justify-content: space-between;
   background-color: var(--very-dark-blue);
   color: var(--off-white);
-  max-width: 300px;
+  max-width: 250px;
   width: 100%;
+  min-height: 100px;
   padding: 10px 15px;
 }
 
@@ -285,7 +286,6 @@ img {
 
 .fb-name {
   color: var(--soft-orange);
-  text-align: right;
   margin: 10px 0 0 0;
 }
 
@@ -412,5 +412,8 @@ img {
   .feedback-container .form-input textarea,
   .form-input > input[type="text"] {
     width: 100%;
+  }
+  .fb-item {
+    max-width: none;
   }
 }
